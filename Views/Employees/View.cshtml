@@ -1,0 +1,26 @@
+@model MvcCrudApp.Models.UpdateEmployeeViewModel;
+
+<h1>Edit Employee</h1>
+<form method="post" action="View" class="mt-5">
+  <div class="mb-3">
+    <label for="" class="form-label">Id</label>
+    <input type="text" class="form-control" asp-for="Id" readonly>
+
+    <label for="" class="form-label">Name</label>
+    <input type="text" class="form-control" asp-for="Name">
+
+    <label for="" class="form-label">Email address</label>
+    <input type="email" class="form-control" asp-for="Email">
+
+    <label for="" class="form-label">Salary</label>
+    <input type="number" class="form-control" asp-for="Salary">
+
+    <label for="" class="form-label">Date Of Birth</label>
+    <input type="date" class="form-control" asp-for="DateOfBirth">
+
+    <label for="" class="form-label">Department</label>
+    <input type="text" class="form-control" asp-for="Department">
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+  <button type="submit" class="btn btn-danger" asp-controller="Employees" asp-action="Delete">Delete</button>
+</form>
